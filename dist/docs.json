@@ -1,0 +1,217 @@
+{
+  "api": {
+    "name": "WechatSDKPlugin",
+    "slug": "wechatsdkplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "echo",
+        "signature": "(options: { value: string; }) => Promise<any>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ value: string; }"
+          }
+        ],
+        "returns": "Promise<any>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "options"
+          }
+        ],
+        "docs": "测试",
+        "complexTypes": [],
+        "slug": "echo"
+      },
+      {
+        "name": "pay",
+        "signature": "(options: { prepayId: string; packageValue: string; nonceStr: string; timeStamp: string; sign: string; }) => Promise<any>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ prepayId: string; packageValue: string; nonceStr: string; timeStamp: string; sign: string; }"
+          }
+        ],
+        "returns": "Promise<any>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "options"
+          }
+        ],
+        "docs": "调起微信支付",
+        "complexTypes": [],
+        "slug": "pay"
+      },
+      {
+        "name": "isInstalled",
+        "signature": "() => Promise<any>",
+        "parameters": [],
+        "returns": "Promise<any>",
+        "tags": [],
+        "docs": "判断是否安装微信",
+        "complexTypes": [],
+        "slug": "isinstalled"
+      },
+      {
+        "name": "shareText",
+        "signature": "(options: { text: string; scene: string; }) => Promise<any>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ text: string; scene: string; }"
+          }
+        ],
+        "returns": "Promise<any>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "options"
+          }
+        ],
+        "docs": "分享文本",
+        "complexTypes": [],
+        "slug": "sharetext"
+      },
+      {
+        "name": "shareLink",
+        "signature": "(options: { url: string; title: string; description: string; thumb?: string; scene: number; }) => Promise<any>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "thumb - 图片url地址 例如：http://xxx.com/test.png",
+            "type": "{ url: string; title: string; description: string; thumb?: string | undefined; scene: number; }"
+          }
+        ],
+        "returns": "Promise<any>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "options thumb - 图片url地址 例如：http://xxx.com/test.png"
+          }
+        ],
+        "docs": "分享链接",
+        "complexTypes": [],
+        "slug": "sharelink"
+      },
+      {
+        "name": "shareImage",
+        "signature": "(options: { image: string; title: string; description: string; scene: number; }) => Promise<any>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": " image - 本地图片的名称，如有特殊需求请自行修改获取图片的位置或方式\r\n ios默认去documentDirectory下寻找\r\n android默认去 /XXX/yourAppPackageName/cache目录下寻找图片文件",
+            "type": "{ image: string; title: string; description: string; scene: number; }"
+          }
+        ],
+        "returns": "Promise<any>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "options  image - 本地图片的名称，如有特殊需求请自行修改获取图片的位置或方式\r\n ios默认去documentDirectory下寻找\r\n android默认去 /XXX/yourAppPackageName/cache目录下寻找图片文件"
+          }
+        ],
+        "docs": "分享图片,可配合@capacitor/filesystem 使用",
+        "complexTypes": [],
+        "slug": "shareimage"
+      },
+      {
+        "name": "shareMiniProgram",
+        "signature": "(options: { webpageUrl: string; userName: string; path: string; hdImageData: string; withShareTicket: boolean; miniProgramType: number; title: string; description: string; scene: number; }) => Promise<any>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": " hdImageData - 图片url地址 例如：http://xxx.com/test.png",
+            "type": "{ webpageUrl: string; userName: string; path: string; hdImageData: string; withShareTicket: boolean; miniProgramType: number; title: string; description: string; scene: number; }"
+          }
+        ],
+        "returns": "Promise<any>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "options  hdImageData - 图片url地址 例如：http://xxx.com/test.png"
+          }
+        ],
+        "docs": "分享微信小程序",
+        "complexTypes": [],
+        "slug": "shareminiprogram"
+      },
+      {
+        "name": "launchMiniProgram",
+        "signature": "(options: { userName: string; path: string; miniProgramType: number; }) => Promise<any>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ userName: string; path: string; miniProgramType: number; }"
+          }
+        ],
+        "returns": "Promise<any>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "options"
+          }
+        ],
+        "docs": "调起微信小程序",
+        "complexTypes": [],
+        "slug": "launchminiprogram"
+      },
+      {
+        "name": "sendAuthRequest",
+        "signature": "(options: { scope: string; state: string; }) => Promise<any>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ scope: string; state: string; }"
+          }
+        ],
+        "returns": "Promise<any>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "options"
+          }
+        ],
+        "docs": "微信登录",
+        "complexTypes": [],
+        "slug": "sendauthrequest"
+      },
+      {
+        "name": "wxOpenCustomerServiceChat",
+        "signature": "(options: { corpId: string; url: string; }) => Promise<any>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "corpId - 企业ID\r\nurl - 客服URL",
+            "type": "{ corpId: string; url: string; }"
+          }
+        ],
+        "returns": "Promise<any>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "options corpId - 企业ID\r\nurl - 客服URL"
+          },
+          {
+            "name": "constructor"
+          }
+        ],
+        "docs": "拉起微信客服",
+        "complexTypes": [],
+        "slug": "wxopencustomerservicechat"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}

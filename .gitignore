@@ -1,5 +1,4 @@
 # node files
-dist
 node_modules
 
 # iOS files
@@ -585,7 +584,6 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
